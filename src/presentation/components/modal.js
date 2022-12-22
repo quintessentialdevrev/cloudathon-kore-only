@@ -1,10 +1,20 @@
-import React from "react";
+import { React, useState } from "react";
 import Star from "./star";
+import { motion } from "framer-motion";
+import Counter from "./counter";
 
 export default function Modal({ name, author, rating, setBool }) {
   const h = 25;
+  const [quantity, setQuantity] = useState(0);
+
   return (
-    <div className="modal-container">
+    <motion.div
+      className="modal-container"
+      initial={{ opacity: 0.5, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -50 }}
+      transition={{ duration: 0.2 }}
+    >
       <div className="modal-rel-box">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -24,8 +34,9 @@ export default function Modal({ name, author, rating, setBool }) {
         <div className="modal-content">
           <img
             className="modal-img"
-            src={"https://storage.googleapis.com/bhaumikbucket/id1_post.jpeg"}
+            src={"https://storage.googleapis.com/bhaumikbucket/id13_post.jpeg"}
           />
+          {/* <img className="modal-img" src={require("../assets/book-1.png")} /> */}
           <div className="modal-right">
             <h2>{name}</h2>
             <h3>{author}</h3>
@@ -42,11 +53,22 @@ export default function Modal({ name, author, rating, setBool }) {
               <div className="genre">Philosopy</div>
               <div className="genre">Educational</div>
             </div>
-            <button>Add To Cart</button>
+
+            {quantity ? (
+              <Counter quantity={quantity} setQuantity={setQuantity} />
+            ) : (
+              <button
+                onClick={() => {
+                  setQuantity(1);
+                }}
+              >
+                Add To Cart
+              </button>
+            )}
             <h4>Reviews</h4>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
