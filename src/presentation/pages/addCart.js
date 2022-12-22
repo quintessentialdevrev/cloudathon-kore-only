@@ -70,9 +70,9 @@ function AddCart() {
     return (
     <div className="master-master">
         <div className='addcart-heading-master'>
-            <h3 className='addcart-heading'>
-                We thank you for choosing us
-            </h3>
+            <p className='addcart-heading'>
+                We thank you for choosing<br/><p>Bookstore</p> 
+            </p>
             {/* some svg with absolute positioning*/}
         </div>
         <div className='master'>
@@ -91,7 +91,7 @@ function AddCart() {
                     <textarea
                         type="textarea"
                         className="text-input address-input"
-                        placeholder="Eg: Mumbai , Maharashtra"
+                        placeholder="Write your Current Address"
                     />
                 </div>
             </div>
@@ -101,7 +101,7 @@ function AddCart() {
                     <input
                         type="text"
                         className="text-input"
-                        placeholder="Eg:mohdmehdi2003@gmail.com"
+                        placeholder="Eg: xyz@gmail.com"
                         
                     />
                 </div>
