@@ -8,6 +8,11 @@ export default function Card({ id, url, name, author, rating, quantity }) {
   const handleClick = () => {
     setBool(true);
   };
+  let ratingArr=[];
+  for (let i = 0; i < 4; i++) {
+    ratingArr.push(<Star />);
+  }
+
   return (
     <>
       <AnimatePresence mode="wait">
@@ -30,11 +35,12 @@ export default function Card({ id, url, name, author, rating, quantity }) {
         <h2>{name}</h2>
         <h3>{author}</h3>
         <div>
+          {ratingArr}
+          {/* <Star />
           <Star />
           <Star />
           <Star />
-          <Star />
-          <Star />
+          <Star /> */}
         </div>
       </div>
     </>

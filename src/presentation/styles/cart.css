@@ -8,18 +8,25 @@
   letter-spacing: 0.03em;
 }
 .cart-unit {
-    display: flex;
-    width: 50em;
-    /* background-color: aqua; */
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1em;
+  display: flex;
+  width: 50em;
+  /* background-color: aqua; */
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5em;
 }
 .cart-unit > h2 {
-    font-size:1.1em;
+  font-size: 1.1em;
+  font-weight: 500;
 }
-.cart-book-title{
-    width: 15em;
+.cart-book-title {
+  width: 15em;
+}
+.cart-book-quantity {
+  width: 2em;
+}
+.cart-book-price {
+  width: 5em;
 }
 .cart-img {
   height: 5.2em;
