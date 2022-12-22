@@ -20,7 +20,7 @@ export const PageSlider = ({ bounds, setBounds }) => {
     switch (x) {
       case 1: {
         if (bounds[0] === 0) {
-          return { color: "#0058CC" };
+          return { color: "#0058CC", textDecoration: "underline" };
         } else {
           return {
             color: "black",
@@ -28,8 +28,8 @@ export const PageSlider = ({ bounds, setBounds }) => {
         }
       }
       case 2: {
-        if (bounds[0] > 2 && bounds[1] < 20) {
-          return { color: "#0058CC" };
+        if (bounds[0] > 1 && bounds[1] < 20) {
+          return { color: "#0058CC", textDecoration: "underline" };
         } else {
           return {
             color: "black",
@@ -37,8 +37,8 @@ export const PageSlider = ({ bounds, setBounds }) => {
         }
       }
       case 3: {
-        if (bounds[0] > 20 && bounds[1] < 30) {
-          return { color: "#0058CC" };
+        if (bounds[0] > 10) {
+          return { color: "#0058CC", textDecoration: "underline" };
         } else {
           return {
             color: "black",
