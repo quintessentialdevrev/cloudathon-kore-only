@@ -55,13 +55,35 @@ export default function Cart() {
               Oops Your <span>cart</span> is empty!!
             </h1>
             <p>Looks like you haven’t added anything to your cart.</p>
-            <button
+            <div
+              className="empty-link"
+              onClick={() => {
+                navigate("/books");
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                className="arrow"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                />
+              </svg>
+              <p>Continue Shopping</p>
+            </div>
+            {/* <button
               onClick={() => {
                 navigate("/books");
               }}
             >
               Back To Shopping
-            </button>
+            </button> */}
           </div>
           <img
             className="empty-illu"
