@@ -104,7 +104,7 @@
   height: 4em;
   color: #0058cc;
 }
-.bag-container > circle {
+.bag-container > .circle {
   background-color: rgb(0, 152, 76);
   color: white;
   padding: 0.5em;

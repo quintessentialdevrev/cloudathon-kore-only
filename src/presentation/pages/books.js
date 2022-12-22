@@ -1,91 +1,10 @@
 import React from "react";
 import Card from "../components/card";
 import { Bag, PageSlider } from "../components/footer";
+import { useSelector } from "react-redux";
 
 export default function Books() {
-  const data = [
-    {
-      id: Math.random(),
-      url: "",
-      name: "The Psychology of Money",
-      author: "Morgan Housel",
-      rating: 4,
-      quantity: 0,
-    },
-    {
-      id: Math.random(),
-      url: "",
-      name: "The Psychology of Money",
-      author: "Morgan Housel",
-      rating: 4,
-      quantity: 0,
-    },
-    {
-      id: Math.random(),
-      url: "",
-      name: "The Psychology of Money",
-      author: "Morgan Housel",
-      rating: 4,
-      quantity: 0,
-    },
-    {
-      id: Math.random(),
-      url: "",
-      name: "The Psychology of Money",
-      author: "Morgan Housel",
-      rating: 4,
-      quantity: 0,
-    },
-    {
-      id: Math.random(),
-      url: "",
-      name: "The Psychology of Money",
-      author: "Morgan Housel",
-      rating: 4,
-      quantity: 0,
-    },
-    {
-      id: Math.random(),
-      url: "",
-      name: "The Psychology of Money",
-      author: "Morgan Housel",
-      rating: 4,
-      quantity: 0,
-    },
-    {
-      id: Math.random(),
-      url: "",
-      name: "The Psychology of Money",
-      author: "Morgan Housel",
-      rating: 4,
-      quantity: 0,
-    },
-    {
-      id: Math.random(),
-      url: "",
-      name: "The Psychology of Money",
-      author: "Morgan Housel",
-      rating: 4,
-      quantity: 0,
-    },
-    {
-      id: Math.random(),
-      url: "",
-      name: "The Psychology of Money",
-      author: "Morgan Housel",
-      rating: 4,
-      quantity: 0,
-    },
-    {
-      id: Math.random(),
-      url: "",
-      name: "The Psychology of Money",
-      author: "Morgan Housel",
-      rating: 4,
-      quantity: 0,
-    },
-    
-  ];
+  const data = useSelector((state) => state.allData);
   const arr = data.map((ele) => {
     return (
       <Card
@@ -95,6 +14,7 @@ export default function Books() {
         name={ele.name}
         author={ele.author}
         rating={ele.rating}
+        quantity={ele.quantity}
       />
     );
   });

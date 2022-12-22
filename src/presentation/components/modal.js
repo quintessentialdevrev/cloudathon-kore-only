@@ -2,10 +2,21 @@ import { React, useState } from "react";
 import Star from "./star";
 import { motion } from "framer-motion";
 import Counter from "./counter";
+import { useDispatch } from "react-redux";
+import { incre } from "../../logic/actions/cartActions";
 
-export default function Modal({ id, url, name, author, rating, setBool }) {
+export default function Modal({
+  id,
+  url,
+  name,
+  author,
+  rating,
+  setBool,
+  quantity,
+}) {
+  const dispatch = useDispatch();
   const h = 25;
-  const [quantity, setQuantity] = useState(0);
+  // const [quantity, setQuantity] = useState(0);
 
   return (
     <motion.div
@@ -52,11 +63,11 @@ export default function Modal({ id, url, name, author, rating, setBool }) {
             </div>
 
             {quantity ? (
-              <Counter quantity={quantity} setQuantity={setQuantity} />
+              <Counter quantity={quantity} id={id} />
             ) : (
               <button
                 onClick={() => {
-                  setQuantity(1);
+                  dispatch(incre({ id, quantity }));
                 }}
               >
                 Add To Cart

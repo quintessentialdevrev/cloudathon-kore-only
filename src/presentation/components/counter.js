@@ -1,11 +1,17 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { incre, decre } from "../../logic/actions/cartActions";
 
-export default function Counter({ quantity, setQuantity }) {
+export default function Counter({ id, quantity }) {
+  const dispatch = useDispatch();
+
   const handleIncre = () => {
-    setQuantity((prev) => prev + 1);
+    dispatch(incre({ id, quantity }));
+    console.log(id, quantity);
   };
   const handleDecre = () => {
-    setQuantity((prev) => prev - 1);
+    dispatch(decre({ id, quantity }));
+    console.log(id, quantity);
   };
   return (
     <div className="counter">

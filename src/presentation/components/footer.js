@@ -66,7 +66,7 @@ export const Bag = () => {
           clipRule="evenodd"
         />
       </svg>
-      <circle className="circle">12</circle>
+      <div className="circle">12</div>
     </div>
   );
 };

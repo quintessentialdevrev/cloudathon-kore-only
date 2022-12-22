@@ -3,7 +3,7 @@ import Modal from "./modal";
 import Star from "./star";
 import { AnimatePresence } from "framer-motion";
 
-export default function Card({ id, url, name, author, rating }) {
+export default function Card({ id, url, name, author, rating, quantity }) {
   const [bool, setBool] = useState(false);
   const handleClick = () => {
     setBool(true);
@@ -18,6 +18,7 @@ export default function Card({ id, url, name, author, rating }) {
             name={name}
             author={author}
             rating={rating}
+            quantity ={quantity}
             setBool={setBool}
           />
         )}
