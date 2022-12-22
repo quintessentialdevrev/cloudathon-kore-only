@@ -8,9 +8,9 @@ export default function Card({ id, url, name, author, rating, quantity }) {
   const handleClick = () => {
     setBool(true);
   };
-  let ratingArr=[];
-  for (let i = 0; i < 4; i++) {
-    ratingArr.push(<Star />);
+  let ratingArr = [];
+  for (let i = 0; i < rating; i++) {
+    ratingArr.push(<Star key={Math.random()} />);
   }
 
   return (

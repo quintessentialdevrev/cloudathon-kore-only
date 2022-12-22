@@ -1,9 +1,15 @@
 .cart-container {
   margin: 0em 5em;
 }
+
+hr {
+  width: 50em;
+  border: none;
+  border-top: 1px solid gray;
+}
 .cart-container > h1 {
   font-size: 2.5em;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   font-weight: 500;
   letter-spacing: 0.03em;
 }
@@ -13,11 +19,19 @@
   /* background-color: aqua; */
   justify-content: space-between;
   align-items: center;
-  margin-top: 1.5em;
+  margin: 0.7em 0em;
+  /* margin-top: 1.5em; */
 }
 .cart-unit > h2 {
   font-size: 1.1em;
   font-weight: 500;
+}
+.cart-unit > svg {
+  height: 20px;
+  cursor: pointer;
+}
+.cart-unit > svg:hover {
+  color: red;
 }
 .cart-book-title {
   width: 15em;
@@ -31,6 +45,49 @@
 .cart-img {
   height: 5.2em;
 }
-.Cart-logo {
-  height: 80%;
+
+/* empty */
+.empty-container > h1 {
+  font-size: 4em;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  width: 10em;
+}
+.empty-container > p {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 1em 0em;
+}
+.empty-container > h1 > span {
+  font-size: 1em;
+  text-decoration: underline;
+  letter-spacing: 0.03em;
+  /* color: #0058cc; */
+  color: #cc4400;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.empty-container > button {
+  color: white;
+  margin: 1em 0.2em;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 500;
+  background-color: #0058cc;
+  border: none;
+  border-radius: 5px;
+  padding: 1em;
+}
+.empty-container > button:hover {
+  background-color: #00367e;
+}
+
+.empty-combine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.empty-illu {
+  height: 25em;
 }
