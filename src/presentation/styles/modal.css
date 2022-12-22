@@ -1,0 +1,87 @@
+.modal-container {
+  position: absolute;
+  top: 9em;
+  left: 5em;
+  height: 85%;
+  width: 90%;
+  background-color: #f7f7f7;
+  z-index: 10;
+}
+.modal-rel-box {
+  /* background-color: aqua; */
+  position: relative;
+}
+.modal-content {
+  padding: 5em 10em;
+  /* align-items: center; */
+  /* width: fit-content; */
+  justify-content: space-between;
+  display: flex;
+}
+
+.modal-right > h2 {
+  font-size: 3em;
+  width: 10em;
+}
+.modal-right > h3 {
+  font-size: 2.5em;
+  margin: 0.5em 0em;
+  color: #787d7e;
+}
+.modal-right > svg {
+  height: 3em;
+}
+
+.modal-genres {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30em;
+  /* background-color: aqua; */
+}
+
+.modal-right > .genre-title {
+  font-size: 2em;
+  color: #0058cc;
+}
+
+.genre {
+  font-size: 1.5em;
+  padding: 0.5em;
+  margin: 0.2em 0.2em;
+  width: fit-content;
+  background: rgba(0, 88, 204, 0.4);
+  border-radius: 5px;
+}
+
+.modal-rel-box > svg {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  /* margin: 10px; */
+  height: 40px;
+}
+.modal-rel-box > svg:hover {
+  color: red;
+}
+
+.modal-right > button {
+  color: white;
+  margin: 1em 0.2em;
+  width: 10em;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 500;
+  background-color: #0058cc;
+  border: none;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.modal-right > h4 {
+  text-decoration: underline;
+  color: #0058cc;
+  font-weight: 400;
+  font-size: 1.3em;
+  cursor: pointer;
+}

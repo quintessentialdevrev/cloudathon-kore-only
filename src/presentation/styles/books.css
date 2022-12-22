@@ -1,0 +1,115 @@
+/* books */
+.books-container {
+  font-size: 0.8em;
+  margin: 0em 8em;
+  /* margin: auto; */
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.books-footer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+  justify-content: center;
+}
+
+/* cards */
+.unit-container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+  padding: 1em 2em;
+  cursor: pointer;
+}
+.unit-container:hover {
+  /* border: solid 2px; */
+  background: rgba(0, 88, 204, 0.1);
+}
+
+.img {
+  height: 15em;
+  margin: auto;
+}
+
+.unit-container > h2 {
+  text-align: center;
+  font-size: 1.2em;
+  width: 10em;
+  margin: 0.2em;
+  font-weight: 500;
+}
+.unit-container > h3 {
+  text-align: center;
+  font-size: 1em;
+  width: 10em;
+  color: #787d7e;
+  margin-bottom: 0.2em;
+  font-weight: 500;
+}
+
+.star {
+  height: 1.2em;
+  margin: 0.1em;
+  color: #f6c444;
+}
+
+/* pageslider */
+.page-slider {
+  display: flex;
+  border: 3px solid rgba(0, 88, 204, 0.4);
+  border-radius: 10px;
+  width: fit-content;
+  padding: 1em;
+  /* margin: auto; */
+  align-items: center;
+}
+.page-slider > svg {
+  height: 2em;
+  cursor: pointer;
+}
+.page-slider > svg:hover {
+  color: #0058cc;
+}
+.page-slider > hr {
+  height: 2em;
+  width: 2px;
+  border: none;
+  background-color: #787d7e;
+  margin: 0.5em;
+  cursor: pointer;
+}
+.page-slider > h2 {
+  margin: 0.5em;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.3em;
+}
+.page-slider > h2:hover {
+  color: #0058cc;
+}
+
+/* bag */
+.bag-container {
+  position: relative;
+  margin: 1em;
+  cursor: pointer;
+}
+.bag-container > svg {
+  height: 4em;
+  color: #0058cc;
+}
+.bag-container > circle {
+  background-color: rgb(0, 152, 76);
+  color: white;
+  padding: 0.5em;
+  border-radius: 20px;
+  position: absolute;
+  top: 60%;
+  left: 70%;
+}

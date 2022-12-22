@@ -1,0 +1,17 @@
+.Cart-header{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 2.9em;
+margin: 1em 1.9em;
+color: #000000;
+}
+
+.cart-body{
+    display:flex;
+    justify-content: space-between;
+}
+
+.Cart-logo{
+    height: 80%;    
+}
