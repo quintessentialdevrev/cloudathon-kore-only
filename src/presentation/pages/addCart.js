@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function AddCart() {
+
+    const [totalAmt, settotalAmt] = useState(0)
 
     // ISKO REPLACE KARNA HAI DYNAMIC DATA SE
     let arrayData=[
@@ -45,7 +47,16 @@ function AddCart() {
     ]
     // this is the mapping
     // will have to use useState depending on the situtation
+
+    // useEffect(() => {
+    //     arrayData.map((each) => {
+    //         settotalAmt((prev)=>{prev+=(each.quantity * each.price)})
+    //     })
+    // }, [])
+    
+
     let arrayRender = arrayData.map((each)=>{
+        // settotalAmt((prev)=>{prev+=(each.quantity * each.price)})
         return(
             <div className= 'cart-list-item'>
                 <p className='product-item'>{each.product}</p>
@@ -54,6 +65,7 @@ function AddCart() {
             </div>
         )
     })
+    
 
     return (
     <div className="master-master">
@@ -95,14 +107,18 @@ function AddCart() {
                 </div>
                 <div className="unit ">
                     <h3 className='input-label'>Cart</h3>
-                    <div className='cart-list'>
-                        <div className='cart-list-header cart-list-item'>
-                            <p className='product-header product-item'>Product</p>
-                            <p className='price-header price-item'>Price</p>
-                            <p className='quantity-header quantity-item'>Quantity</p>
+                    <div className='cart-list-master'>
+                        <div className='cart-list'>
+                            <div className='cart-list-header cart-list-item'>
+                                <p className='product-header product-item'>Product</p>
+                                <p className='price-header price-item'>Price</p>
+                                <p className='quantity-header quantity-item'>Quantity</p>
+                            </div>
+                            {arrayRender}
                         </div>
-                        {arrayRender}
+                        {totalAmt}
                     </div>
+                    
                 </div>
             </div>
         </div>

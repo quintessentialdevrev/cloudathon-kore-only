@@ -40,13 +40,17 @@
     width : 50%;
     margin-right : 70px;
 }
+.cart-list-master{
+    background-color:#0058cc44;
+    width: 400px;
+    padding-bottom: 40px;
+}
 .cart-list{
     width: 400px;
     height :100%;
-    background-color:#0058cc44;
     display : flex;
     flex-direction: column;
-    max-height: 15em;
+    max-height: 13em;
     overflow:scroll;
 }
 .cart-list-item{
