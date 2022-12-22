@@ -18,12 +18,13 @@ export default function Card({ id, url, name, author, rating, quantity }) {
             name={name}
             author={author}
             rating={rating}
-            quantity ={quantity}
+            quantity={quantity}
             setBool={setBool}
           />
         )}
       </AnimatePresence>
       <div className="unit-container" onClick={handleClick}>
+        {quantity != 0 && <div className="quantity">{quantity}</div>}
         <img className="img" src={url} />
         {/* <img className="img" src={require("../assets/book-1.png")} /> */}
         <h2>{name}</h2>

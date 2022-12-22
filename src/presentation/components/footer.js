@@ -1,10 +1,10 @@
 import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const PageSlider = () => {
   const [bounds, setBounds] = useState([0, 9]);
 
-  
   return (
     <div className="page-slider">
       <svg
@@ -46,8 +46,12 @@ export const PageSlider = () => {
 };
 
 export const Bag = () => {
+  let total = 0;
   const navigate = useNavigate();
-  
+  const cartData = useSelector((state) => state.cartData);
+  cartData.forEach((item) => {
+    total = total + item.quantity;
+  });
   return (
     <div
       className="bag-container"
@@ -66,7 +70,7 @@ export const Bag = () => {
           clipRule="evenodd"
         />
       </svg>
-      <div className="circle">12</div>
+      <div className="circle">{total}</div>
     </div>
   );
 };
