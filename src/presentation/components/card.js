@@ -3,7 +3,7 @@ import Modal from "./modal";
 import Star from "./star";
 import { AnimatePresence } from "framer-motion";
 
-export default function Card({ name, author, rating }) {
+export default function Card({ id, url, name, author, rating }) {
   const [bool, setBool] = useState(false);
   const handleClick = () => {
     setBool(true);
@@ -13,6 +13,8 @@ export default function Card({ name, author, rating }) {
       <AnimatePresence mode="wait">
         {bool && (
           <Modal
+            id={id}
+            url={url}
             name={name}
             author={author}
             rating={rating}
@@ -21,10 +23,7 @@ export default function Card({ name, author, rating }) {
         )}
       </AnimatePresence>
       <div className="unit-container" onClick={handleClick}>
-        <img
-          className="img"
-          src={"https://storage.googleapis.com/bhaumikbucket/id12_post.jpeg"}
-        />
+        <img className="img" src={url} />
         {/* <img className="img" src={require("../assets/book-1.png")} /> */}
         <h2>{name}</h2>
         <h3>{author}</h3>

@@ -13,19 +13,39 @@ export default function Navbar() {
   const handleTap = (x) => {
     switch (x) {
       case "home": {
-        setBool({ homeBool: true, booksBool: false, contactBool: false,cartBool:false });
+        setBool({
+          homeBool: true,
+          booksBool: false,
+          contactBool: false,
+          cartBool: false,
+        });
         break;
       }
       case "books": {
-        setBool({ homeBool: false, booksBool: true, contactBool: false ,cartBool:false});
+        setBool({
+          homeBool: false,
+          booksBool: true,
+          contactBool: false,
+          cartBool: false,
+        });
         break;
       }
       case "contact": {
-        setBool({ homeBool: false, booksBool: false, contactBool: true,cartBool:false });
+        setBool({
+          homeBool: false,
+          booksBool: false,
+          contactBool: true,
+          cartBool: false,
+        });
         break;
       }
       case "cart": {
-        setBool({ homeBool: false, booksBool: false, contactBool: false ,cartBool:true});
+        setBool({
+          homeBool: false,
+          booksBool: false,
+          contactBool: false,
+          cartBool: true,
+        });
         break;
       }
     }
@@ -60,18 +80,6 @@ export default function Navbar() {
         </motion.span>
         <motion.span
           onTap={() => {
-            handleTap("contact");
-            !bool.contactBool && navigate("/contact");
-          }}
-          style={{
-            textDecoration: bool.contactBool ? "underline" : "",
-            color: bool.contactBool ? "#0058CC" : "",
-          }}
-        >
-          Contact Us
-        </motion.span>
-        <motion.span
-          onTap={() => {
             handleTap("cart");
             !bool.cartBool && navigate("/cart");
           }}
@@ -81,6 +89,18 @@ export default function Navbar() {
           }}
         >
           My Cart
+        </motion.span>
+        <motion.span
+          onTap={() => {
+            handleTap("contact");
+            !bool.contactBool && navigate("/contact");
+          }}
+          style={{
+            textDecoration: bool.contactBool ? "underline" : "",
+            color: bool.contactBool ? "#0058CC" : "",
+          }}
+        >
+          Contact Us
         </motion.span>
       </nav>
     </header>

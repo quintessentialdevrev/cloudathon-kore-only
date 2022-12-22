@@ -1,17 +1,29 @@
-.Cart-header{
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 2.9em;
-margin: 1em 1.9em;
-color: #000000;
+.cart-container {
+  margin: 0em 5em;
 }
-
-.cart-body{
-    display:flex;
+.cart-container > h1 {
+  font-size: 2.5em;
+  text-decoration: underline;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+.cart-unit {
+    display: flex;
+    width: 50em;
+    /* background-color: aqua; */
     justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
 }
-
-.Cart-logo{
-    height: 80%;    
+.cart-unit > h2 {
+    font-size:1.1em;
+}
+.cart-book-title{
+    width: 15em;
+}
+.cart-img {
+  height: 5.2em;
+}
+.Cart-logo {
+  height: 80%;
 }

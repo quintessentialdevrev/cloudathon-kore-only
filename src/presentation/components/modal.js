@@ -3,7 +3,7 @@ import Star from "./star";
 import { motion } from "framer-motion";
 import Counter from "./counter";
 
-export default function Modal({ name, author, rating, setBool }) {
+export default function Modal({ id, url, name, author, rating, setBool }) {
   const h = 25;
   const [quantity, setQuantity] = useState(0);
 
@@ -32,10 +32,7 @@ export default function Modal({ name, author, rating, setBool }) {
           />
         </svg>
         <div className="modal-content">
-          <img
-            className="modal-img"
-            src={"https://storage.googleapis.com/bhaumikbucket/id13_post.jpeg"}
-          />
+          <img className="modal-img" src={url} />
           {/* <img className="modal-img" src={require("../assets/book-1.png")} /> */}
           <div className="modal-right">
             <h2>{name}</h2>
