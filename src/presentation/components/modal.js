@@ -63,11 +63,11 @@ export default function Modal({
             </div>
 
             {quantity ? (
-              <Counter quantity={quantity} id={id} />
+              <Counter quantity={quantity} id={id} url={url} name={name} />
             ) : (
               <button
                 onClick={() => {
-                  dispatch(incre({ id, quantity }));
+                  dispatch(incre({ id, quantity, url, name }));
                 }}
               >
                 Add To Cart

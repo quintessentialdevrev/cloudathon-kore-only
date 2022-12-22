@@ -2,15 +2,15 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { incre, decre } from "../../logic/actions/cartActions";
 
-export default function Counter({ id, quantity }) {
+export default function Counter({ id, quantity, url, name }) {
   const dispatch = useDispatch();
 
   const handleIncre = () => {
-    dispatch(incre({ id, quantity }));
+    dispatch(incre({ id, quantity, url, name }));
     console.log(id, quantity);
   };
   const handleDecre = () => {
-    dispatch(decre({ id, quantity }));
+    dispatch(decre({ id, quantity, url, name }));
     console.log(id, quantity);
   };
   return (

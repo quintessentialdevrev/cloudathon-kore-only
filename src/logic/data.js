@@ -4,7 +4,15 @@ const data = [
     url: "",
     name: "The Psychology of Money",
     author: "Morgan Housel",
-    rating: 4,
+    rating: 3,
+    quantity: 0,
+  },
+  {
+    id: Math.random(),
+    url: "",
+    name: "The Psychology of Money",
+    author: "Morgan Housel",
+    rating: 5,
     quantity: 0,
   },
   {
@@ -28,7 +36,7 @@ const data = [
     url: "",
     name: "The Psychology of Money",
     author: "Morgan Housel",
-    rating: 4,
+    rating: 2,
     quantity: 0,
   },
   {
@@ -36,15 +44,7 @@ const data = [
     url: "",
     name: "The Psychology of Money",
     author: "Morgan Housel",
-    rating: 4,
-    quantity: 0,
-  },
-  {
-    id: Math.random(),
-    url: "",
-    name: "The Psychology of Money",
-    author: "Morgan Housel",
-    rating: 4,
+    rating: 1,
     quantity: 0,
   },
   {
