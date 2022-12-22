@@ -1,6 +1,6 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { motion, AnimateSharedLayout } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [bool, setBool] = useState({
@@ -10,9 +10,11 @@ export default function Navbar() {
     cartBool: false,
   });
   const navigate = useNavigate();
-  const handleTap = (x) => {
-    switch (x) {
-      case "home": {
+  const location = useLocation();
+
+  useEffect(() => {
+    switch (location.pathname) {
+      case "/": {
         setBool({
           homeBool: true,
           booksBool: false,
@@ -21,7 +23,7 @@ export default function Navbar() {
         });
         break;
       }
-      case "books": {
+      case "/books": {
         setBool({
           homeBool: false,
           booksBool: true,
@@ -30,7 +32,7 @@ export default function Navbar() {
         });
         break;
       }
-      case "contact": {
+      case "/contact": {
         setBool({
           homeBool: false,
           booksBool: false,
@@ -39,7 +41,7 @@ export default function Navbar() {
         });
         break;
       }
-      case "cart": {
+      case "/cart": {
         setBool({
           homeBool: false,
           booksBool: false,
@@ -49,14 +51,14 @@ export default function Navbar() {
         break;
       }
     }
-  };
+  }, [location]);
+  
   return (
     <header>
       <h1 className="logo">Bookstore</h1>
       <nav className="nav-right">
         <motion.span
           onTap={() => {
-            handleTap("home");
             !bool.homeBool && navigate("/");
           }}
           style={{
@@ -68,7 +70,6 @@ export default function Navbar() {
         </motion.span>
         <motion.span
           onTap={() => {
-            handleTap("books");
             !bool.booksBool && navigate("/books");
           }}
           style={{
@@ -80,7 +81,6 @@ export default function Navbar() {
         </motion.span>
         <motion.span
           onTap={() => {
-            handleTap("cart");
             !bool.cartBool && navigate("/cart");
           }}
           style={{
@@ -92,7 +92,6 @@ export default function Navbar() {
         </motion.span>
         <motion.span
           onTap={() => {
-            handleTap("contact");
             !bool.contactBool && navigate("/contact");
           }}
           style={{
