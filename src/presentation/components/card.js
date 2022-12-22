@@ -36,11 +36,6 @@ export default function Card({ id, url, name, author, rating, quantity }) {
         <h3>{author}</h3>
         <div>
           {ratingArr}
-          {/* <Star />
-          <Star />
-          <Star />
-          <Star />
-          <Star /> */}
         </div>
       </div>
     </>

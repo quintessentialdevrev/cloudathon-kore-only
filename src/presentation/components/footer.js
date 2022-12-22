@@ -2,12 +2,56 @@ import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-export const PageSlider = () => {
-  const [bounds, setBounds] = useState([0, 9]);
+export const PageSlider = ({ bounds, setBounds }) => {
+  const handlePrev = () => {
+    // console.log(bounds);
+    if (bounds[0] - 10 >= 0) {
+      setBounds([bounds[0] - 10, bounds[1] - 10]);
+    }
+  };
+  const handleNext = () => {
+    // console.log(bounds);
+    if (bounds[1] + 10 < 20) {
+      setBounds([bounds[0] + 10, bounds[1] + 10]);
+    }
+  };
+
+  const handleStyle = (x) => {
+    switch (x) {
+      case 1: {
+        if (bounds[0] === 0) {
+          return { color: "#0058CC" };
+        } else {
+          return {
+            color: "black",
+          };
+        }
+      }
+      case 2: {
+        if (bounds[0] > 2 && bounds[1] < 20) {
+          return { color: "#0058CC" };
+        } else {
+          return {
+            color: "black",
+          };
+        }
+      }
+      case 3: {
+        if (bounds[0] > 20 && bounds[1] < 30) {
+          return { color: "#0058CC" };
+        } else {
+          return {
+            color: "black",
+          };
+        }
+      }
+    }
+  };
 
   return (
     <div className="page-slider">
       <svg
+        onClick={handlePrev}
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -21,13 +65,14 @@ export const PageSlider = () => {
           d="M15.75 19.5L8.25 12l7.5-7.5"
         />
       </svg>
-      <h2>Previous</h2>
-      <h2 style={{ color: "#0058CC" }}>1</h2>
-      <h2>2</h2>
-      <h2>...</h2>
+      <h2 onClick={handlePrev}>Previous</h2>
+      <h2 style={handleStyle(1)}>1</h2>
+      <h2 style={handleStyle(2)}>2</h2>
+      <h2 style={handleStyle(3)}>...</h2>
       <hr />
-      <h2>Next</h2>
+      <h2 onClick={handleNext}>Next</h2>
       <svg
+        onClick={handleNext}
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"

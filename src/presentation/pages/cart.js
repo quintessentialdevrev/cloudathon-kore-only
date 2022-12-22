@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { decre } from "../../logic/actions/cartActions";
+import FilledCart from "../components/filledCart";
 
 export default function Cart() {
   const dispatch = useDispatch();
@@ -39,15 +40,10 @@ export default function Cart() {
     );
   });
   return (
+    // <div className="cart-container"><FilledCart /></div>
     <div className="cart-container">
-      {newArr.length ? (
-        <>
-          <h1>My Cart</h1>
-          <div className="cart-content">
-            {newArr}
-            <hr />
-          </div>
-        </>
+      {cartData.length ? (
+        <FilledCart />
       ) : (
         <div className="empty-combine">
           <div className="empty-container">
@@ -77,13 +73,6 @@ export default function Cart() {
               </svg>
               <p>Continue Shopping</p>
             </div>
-            {/* <button
-              onClick={() => {
-                navigate("/books");
-              }}
-            >
-              Back To Shopping
-            </button> */}
           </div>
           <img
             className="empty-illu"

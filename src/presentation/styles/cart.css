@@ -2,50 +2,6 @@
   margin: 0em 5em;
 }
 
-hr {
-  width: 50em;
-  border: none;
-  border-top: 1px solid gray;
-}
-.cart-container > h1 {
-  font-size: 2.5em;
-  /* text-decoration: underline; */
-  font-weight: 500;
-  letter-spacing: 0.03em;
-}
-.cart-unit {
-  display: flex;
-  width: 50em;
-  /* background-color: aqua; */
-  justify-content: space-between;
-  align-items: center;
-  margin: 0.7em 0em;
-  /* margin-top: 1.5em; */
-}
-.cart-unit > h2 {
-  font-size: 1.1em;
-  font-weight: 500;
-}
-.cart-unit > svg {
-  height: 20px;
-  cursor: pointer;
-}
-.cart-unit > svg:hover {
-  color: red;
-}
-.cart-book-title {
-  width: 15em;
-}
-.cart-book-quantity {
-  width: 2em;
-}
-.cart-book-price {
-  width: 5em;
-}
-.cart-img {
-  height: 5.2em;
-}
-
 /* empty */
 .empty-container > h1 {
   font-size: 4em;
