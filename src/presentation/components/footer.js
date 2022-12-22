@@ -11,7 +11,7 @@ export const PageSlider = ({ bounds, setBounds }) => {
   };
   const handleNext = () => {
     // console.log(bounds);
-    if (bounds[1] + 10 < 20) {
+    if (bounds[1] + 10 < 30) {
       setBounds([bounds[0] + 10, bounds[1] + 10]);
     }
   };
