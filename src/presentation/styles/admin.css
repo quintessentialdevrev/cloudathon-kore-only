@@ -1,0 +1,75 @@
+.admin-master-master{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.admin-master{
+    display: flex;
+    width : 100%;
+    justify-content: center;
+}
+
+.admin-left{
+    background-color : red;
+    height:100px;
+    width:50%;
+    margin-left: 20px;
+    margin-right : 60px;
+}
+.admin-left-input{
+    height : 100px;
+    background-color: black;
+}
+
+.admin-right{
+    width:50%;
+    margin-right: 20px;
+    margin-left : 60px;
+}
+.admin-right > h3{
+    margin-top:10px;
+    color : #0058CC;
+    font-size: 1.5em;
+    font-weight: 550;
+}
+.admin-right > p{
+    font-weight : 530
+}
+
+.admin-right-text-input{
+    height : 40px;
+    width : 250px;
+    border : none;
+    background-color: #F7F7F7;
+    border-radius : 3px;
+    padding:10px;
+}
+
+.admin-right-text-input::placeholder{
+    color : #BEBEBE;
+}
+
+.bottom-most-div{
+    display : flex;
+    justify-content: center;
+    padding-top: 2em;;
+}
+.checkbox-master{
+    display:flex;
+    width : 100%;
+    justify-content: left;
+}
+.checkbox-div{
+    margin-top : 1em;
+}
+.checkbox-right{
+    margin-left: 4em;;
+}
+.checkbox-div > label{
+    margin-left: 5px;
+    font-size: 1.3em;;
+}
+.checkbox-div>input{
+    color:black;
+}

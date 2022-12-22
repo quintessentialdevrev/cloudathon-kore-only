@@ -6,11 +6,14 @@ import "./styles/books.css";
 import "./styles/cart.css";
 import "./styles/dashboard.css";
 import "./styles/modal.css";
+import "./styles/components.css";
+import "./styles/admin.css";
 import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import Books from "./pages/books";
 import ContactUs from "./pages/contactUs";
 import Cart from "./pages/cart";
+import Admin from "./pages/admin";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -22,6 +25,7 @@ export default function App() {
         <Route exact path="/books" element={<Books />} />
         <Route exact path="/contact" element={<ContactUs />} />
         <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/admin" element={<Admin />} />
         {/* <Home /> */}
       </Routes>
     </Router>
