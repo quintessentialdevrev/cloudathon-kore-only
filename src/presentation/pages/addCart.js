@@ -1,5 +1,6 @@
 import { wrap } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
+import BookstoreVector from '../assets/BookstoreVector.svg'
 
 function AddCart() {
 
@@ -73,11 +74,12 @@ function AddCart() {
             <p className='addcart-heading'>
             We thank you for choosing<br/><p>Bookstore ;)</p> 
             </p>
-            {/* some svg with absolute positioning*/}
         </div>
+        {/* <img src={BookstoreVector} alt='' style={{height: '100px', width: '200px', border: 'none'}} /> */}
+        
         <div className='master'>
             <div className='input-left'>
-                <div className="unit">
+                <div className="left-unit">
                     <h3 className='input-label'>Your Name</h3>
                     <input
                         type="text"
@@ -86,7 +88,7 @@ function AddCart() {
                         
                     />
                 </div>
-                <div className="unit">
+                <div className="left-unit">
                     <h3 className='input-label'>Address</h3>
                     <textarea
                         type="textarea"
@@ -97,16 +99,16 @@ function AddCart() {
             </div>
             <div className='input-right'>
                 <div className="unit">
-                    <h3 className='input-label'>Your Email</h3>
+                    <h3 className='input-label input-label-right'>Your Email</h3>
                     <input
                         type="text"
-                        className="text-input"
+                        className="text-input right-input"
                         placeholder="Eg: xyz@gmail.com"
                         
                     />
                 </div>
                 <div className="unit ">
-                    <h3 className='input-label'>Cart</h3>
+                    <h3 className='input-label input-label-right'>Cart</h3>
                     <div className='cart-list-master'>
                         <div className='cart-list'>
                             <div className='cart-list-header cart-list-item' style={{position: 'sticky'}}>

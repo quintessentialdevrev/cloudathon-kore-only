@@ -15,7 +15,7 @@
 }
 .input-label{
     font-size:1em;
-    font-weight: 600;;
+    font-weight: 600;
 }
 .text-input{
     min-width: 400px;
@@ -103,3 +103,60 @@
     margin-left: 50%;
     margin-top: 100px;
 }
+ 
+
+@media only screen and (max-width: 600px) {
+    .addcart-heading-master {
+        margin-left: -8%;
+    }
+    .master {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .left-unit {
+        margin-left: -88%;
+        width: 75%;
+    }
+    .cart-list-master {
+        scale: 0.8;
+        margin-left: -38%;
+    }
+    .addcart-button {
+        scale: 0.8;
+        margin-left: -8%;
+    }
+    .unit {
+        margin-left: -28%;
+        width: 75%;
+    }   
+  }
+
+  
+@media only screen and (max-width: 992px) {
+    .addcart-heading-master {
+        margin-left: -8%;
+    }
+    .left-unit {
+        margin-left: -38%;
+        width: 75%;
+    }
+    .cart-list-master {
+        scale: 0.8;
+        margin-left: -38%;
+    }
+    .addcart-button {
+        scale: 0.8;
+        margin-left: -1%;
+    }
+    .unit {
+        margin-left: -15%;
+        width: 75%;
+    }
+    .right-input {
+        margin-left: -25%;
+    }   
+    .input-label-right {
+        margin-left: -25%;
+    }
+  }
