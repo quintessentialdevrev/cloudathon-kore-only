@@ -44,42 +44,67 @@ export default function FilledCart() {
   });
 
   return (
-    <div className="filled-container">
-      <div className="filled-left">
-        <div className="filled-heading">
-          <h1>Shopping Cart</h1>
-          <h2>3 items</h2>
-        </div>
-        <hr />
+    <>
+      <div className="filled-container">
+        <div className="filled-left">
+          <div className="filled-heading">
+            <h1>Shopping Cart</h1>
+            <h2>{newArr.length} items</h2>
+          </div>
+          <hr />
 
-        <div className="filled-titles">
-          <h3 className="details">PRODUCT DETAILS</h3>
-          <h3>QUANTITY</h3>
-          <h3>PRICE</h3>
-          <h3>TOTAL</h3>
+          <div className="filled-titles">
+            <h3 className="details">PRODUCT DETAILS</h3>
+            <h3>QUANTITY</h3>
+            <h3>PRICE</h3>
+            <h3>TOTAL</h3>
+          </div>
+          <div className="filled-scrollable">{newArr}</div>
         </div>
-        <div className="filled-scrollable">{newArr}</div>
+        <div className="filled-right">
+          <h1>Summary</h1>
+          <div>
+            <h2>Total:</h2>
+            <h2>Rs. {1500}</h2>
+          </div>
+          <div>
+            <h2>Discount:</h2>
+            <h2>10%</h2>
+          </div>
+          <div>
+            <h2>Shipping:</h2>
+            <h2>Rs. 200</h2>
+          </div>
+          <div className="subtotal">
+            <h2>Subtotal:</h2>
+            <h2>Rs. 200</h2>
+          </div>
+          <button>Checkout Items</button>
+        </div>
       </div>
-      <div className="filled-right">
-        <h1>Summary</h1>
-        <div>
-          <h2>Total:</h2>
-          <h2>Rs. 1500</h2>
-        </div>
-        <div>
-          <h2>Discount:</h2>
-          <h2>10%</h2>
-        </div>
-        <div>
-          <h2>Shipping:</h2>
-          <h2>Rs. 200</h2>
-        </div>
-        <div className="subtotal">
-          <h2>Subtotal:</h2>
-          <h2>Rs. 200</h2>
-        </div>
-        <button>Checkout Items</button>
+      {/* shopping wala link */}
+      <div
+        className="shopping-link"
+        onClick={() => {
+          navigate("/books");
+        }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+          stroke="currentColor"
+          className="arrow"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+          />
+        </svg>
+        <p>Continue Shopping</p>
       </div>
-    </div>
+    </>
   );
 }

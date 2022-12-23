@@ -178,3 +178,21 @@ h2 {
   font-weight: 600;
   /* background-color: #cc4400; */
 }
+
+.shopping-link {
+  display: flex;
+  cursor: pointer;
+  margin-left: 5em;
+
+  color: #0058cc;
+}
+
+.shopping-link:hover {
+  color: #00367e;
+  text-decoration: underline;
+}
+
+.shopping-link > svg {
+  height: 20px;
+  margin: 0em 0.2em;
+}
