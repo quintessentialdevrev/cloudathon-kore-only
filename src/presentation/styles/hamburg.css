@@ -1,5 +1,6 @@
 .hamburg-container {
   position: relative;
+  display: none;
 }
 
 .menu-svg {
@@ -19,4 +20,13 @@
   width: 5.5em;
   margin: 0.2em 0em;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 730px) {
+  .nav-right {
+    display: none;
+  }
+  .hamburg-container {
+    display: block;
+  }
 }

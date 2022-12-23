@@ -58,7 +58,7 @@ export default function Navbar() {
     <header>
       <h1 className="logo">Bookstore</h1>
       <Hamburg/>
-      {/* <nav className="nav-right">
+      <nav className="nav-right">
         <motion.span
           onTap={() => {
             !bool.homeBool && navigate("/");
@@ -103,7 +103,7 @@ export default function Navbar() {
         >
           Contact Us
         </motion.span>
-      </nav> */}
+      </nav>
     </header>
   );
 }
