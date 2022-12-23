@@ -1,0 +1,22 @@
+.hamburg-container {
+  position: relative;
+}
+
+.menu-svg {
+  height: 20px;
+}
+
+.dropdown {
+  background: #f7f7f7;
+  padding: 1.5em;
+  position: absolute;
+  width: fit-content;
+  right: 0%;
+  z-index: 10;
+}
+.dropdown > h1 {
+  font-size: 1em;
+  width: 5.5em;
+  margin: 0.2em 0em;
+  font-weight: 500;
+}

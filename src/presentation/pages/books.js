@@ -14,7 +14,7 @@ export default function Books() {
       <Card
         key={ele.id}
         id={ele.id}
-        url={"https://storage.googleapis.com/bhaumikbucket/id12_post.jpeg"}
+        url={"https://storage.googleapis.com/bhaumikbucket/id2_post.jpeg"}
         name={ele.name}
         author={ele.author}
         rating={ele.rating}

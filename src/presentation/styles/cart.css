@@ -41,6 +41,7 @@
 .empty-combine {
   display: flex;
   align-items: center;
+  flex-wrap: wrap-reverse;
   justify-content: space-between;
 }
 .empty-illu {
@@ -51,6 +52,8 @@
   display: flex;
   cursor: pointer;
   color: #0058cc;
+  align-items: center;
+  font-size: 1.5em;
 }
 
 .empty-link:hover {
@@ -59,7 +62,7 @@
 }
 
 .empty-link > svg {
-  height: 20px;
+  height: 1em;
   margin: 0em 0.2em;
 }
 
@@ -69,6 +72,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .filled-left {
   width: 50em;
@@ -183,7 +187,7 @@ h2 {
   display: flex;
   cursor: pointer;
   margin-left: 5em;
-
+  align-items: center;
   color: #0058cc;
 }
 
@@ -193,6 +197,84 @@ h2 {
 }
 
 .shopping-link > svg {
-  height: 20px;
+  height: 2em;
   margin: 0em 0.2em;
+}
+
+@media only screen and (max-width: 1220px) {
+  .empty-combine {
+    justify-content: center;
+  }
+  .empty-link {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 1220px) {
+  .filled-right {
+    width: 50em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .empty-combine {
+    font-size: 0.8em;
+  }
+  .empty-link {
+    font-size: 1.3em;
+  }
+  .filled-container {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .filled-left {
+    margin-right: 5em;
+  }
+  .filled-right {
+    margin-right: 5em;
+  }
+  .shopping-link {
+    font-size: 0.8em;
+    margin: 1em;
+    margin-left: 6em;
+  }
+  .filled-right > button {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .filled-container {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .empty-combine {
+    font-size: 0.5em;
+  }
+  .empty-container > p {
+    font-size: 2em;
+  }
+  .empty-link {
+    font-size: 2em;
+  }
+  .filled-container {
+    margin: 0em 2em;
+  }
+  .filled-left {
+    width: 60em;
+    margin: 0em;
+  }
+  .filled-right {
+    /* width: auto; */
+    margin: 0em;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .filled-container {
+    font-size: 0.6em;
+  }
+  .shopping-link {
+    font-size: 0.8em;
+    margin: 2em;
+  }
 }

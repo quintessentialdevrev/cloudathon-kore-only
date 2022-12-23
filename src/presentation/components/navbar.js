@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 import { motion, AnimateSharedLayout } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
+import Hamburg from "./hamburg";
 
 export default function Navbar() {
   const [bool, setBool] = useState({
@@ -56,7 +57,8 @@ export default function Navbar() {
   return (
     <header>
       <h1 className="logo">Bookstore</h1>
-      <nav className="nav-right">
+      <Hamburg/>
+      {/* <nav className="nav-right">
         <motion.span
           onTap={() => {
             !bool.homeBool && navigate("/");
@@ -101,7 +103,7 @@ export default function Navbar() {
         >
           Contact Us
         </motion.span>
-      </nav>
+      </nav> */}
     </header>
   );
 }

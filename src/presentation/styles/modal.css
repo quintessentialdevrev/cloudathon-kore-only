@@ -2,7 +2,7 @@
   position: absolute;
   top: 9em;
   left: 5em;
-  height: 47em;
+  height: 49em;
   width: 90%;
   background-color: #f7f7f7;
   z-index: 10;
@@ -61,7 +61,7 @@
   right: 20px;
   cursor: pointer;
   /* margin: 10px; */
-  height: 40px;
+  height: 2em;
 }
 .modal-rel-box > svg:hover {
   color: red;
@@ -113,4 +113,38 @@
 }
 .minus {
   color: red;
+}
+
+@media only screen and (max-width: 1200px) {
+  .modal-content {
+    padding: 5em 10em;
+    align-items: center;
+    /* width: fit-content; */
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    /* height: fit-content; */
+  }
+  .modal-right {
+    margin: 1em 0em;
+  }
+  .modal-container {
+    height: fit-content;
+    font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .modal-container {
+    height: fit-content;
+    font-size: 0.8em;
+    left: 2em;
+    height: 79em;
+  }
+  .modal-rel-box > svg {
+    /* position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    /* margin: 10px; */
+  }
 }

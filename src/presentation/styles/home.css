@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap-reverse;
 }
 
 .home-left > h1 {
@@ -52,7 +53,7 @@
   border: none;
   cursor: pointer;
 }
-.search-bar>button:hover {
+.search-bar > button:hover {
   background-color: #0652ae;
 }
 .search-bar > input {
@@ -68,6 +69,8 @@
 .home-description {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  /* width: fit-content; */
   /* margin-bottom: 2em; */
   background-color: #f7f7f7;
   margin: 2em 0em;
@@ -96,4 +99,37 @@
 .home-description > div > p {
   font-size: 1.2em;
   width: 11em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .home-hero {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 1215px) {
+  .home-description {
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 1em auto;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .home-hero {
+    justify-content: center;
+    font-size: 0.8em;
+  }
+  .home-container {
+    margin: 0em 2em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-hero {
+    justify-content: center;
+  }
+  .home-container {
+    margin: 0em 2em;
+  }
 }

@@ -1,22 +1,25 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { decre } from "../../logic/actions/cartActions";
+import { calcSubtotal } from "../../logic/actions/paymentActions";
 
 export default function FilledCart() {
   const dispatch = useDispatch();
+  let orderTotal = 0;
+  const discount = 10;
+
   const navigate = useNavigate();
   const cartData = useSelector((state) => state.cartData);
+
   const newArr = cartData.map((item) => {
+    orderTotal = orderTotal + item.quantity * 500;
     return (
       <div style={{ marginTop: "1em" }} key={Math.random()}>
         <div className="filled-unit">
           <div>
             <img
               className="filled-img"
-              src={
-                "https://storage.googleapis.com/bhaumikbucket/id13_post.jpeg"
-              }
+              src={"https://storage.googleapis.com/bhaumikbucket/id2_post.jpeg"}
             />
             <h1 className="filled-book-title">{item.name}</h1>
           </div>
@@ -42,7 +45,7 @@ export default function FilledCart() {
       </div>
     );
   });
-
+  let subTotal = orderTotal - (200 + orderTotal / discount);
   return (
     <>
       <div className="filled-container">
@@ -65,21 +68,28 @@ export default function FilledCart() {
           <h1>Summary</h1>
           <div>
             <h2>Total:</h2>
-            <h2>Rs. {1500}</h2>
+            <h2>Rs. {orderTotal}</h2>
           </div>
           <div>
             <h2>Discount:</h2>
-            <h2>10%</h2>
+            <h2>{discount}%</h2>
           </div>
           <div>
             <h2>Shipping:</h2>
-            <h2>Rs. 200</h2>
+            <h2>- Rs. 200</h2>
           </div>
           <div className="subtotal">
             <h2>Subtotal:</h2>
-            <h2>Rs. 200</h2>
+            <h2>Rs. {subTotal}</h2>
           </div>
-          <button>Checkout Items</button>
+          <button
+            onClick={() => {
+              dispatch(calcSubtotal(subTotal));
+              navigate("/placeOrder");
+            }}
+          >
+            Checkout Items
+          </button>
         </div>
       </div>
       {/* shopping wala link */}
