@@ -1,7 +1,6 @@
 .cart-container {
   margin: 0em 5em;
 }
-
 /* empty */
 .empty-container > h1 {
   font-size: 4em;
@@ -51,13 +50,131 @@
 .empty-link {
   display: flex;
   cursor: pointer;
-}
-.empty-link > p {
   color: #0058cc;
+}
+
+.empty-link:hover {
+  color: #00367e;
+  text-decoration: underline;
 }
 
 .empty-link > svg {
   height: 20px;
   margin: 0em 0.2em;
-  color: #0058cc;
+}
+
+/* filled */
+.filled-container {
+  margin-left: 5em;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.filled-left {
+  width: 50em;
+}
+.filled-scrollable {
+  max-height: 21em;
+  overflow: scroll;
+  /* background-color: aqua; */
+}
+.filled-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.filled-heading > h1,
+h2 {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.filled-left > hr {
+  margin: 1em 0em;
+  background-color: #d9d9d9;
+  border: none;
+  height: 2px;
+}
+.filled-titles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filled-titles > h3 {
+  font-weight: 400;
+  font-size: 1em;
+  width: 5em;
+  color: #787d7e;
+}
+.filled-titles > .details {
+  width: 20em;
+  /* background-color: aqua; */
+}
+
+.filled-unit {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5em 0em;
+}
+.filled-unit > h2 {
+  font-size: 1em;
+  font-weight: 400;
+  width: 4.9em;
+}
+.filled-unit > div {
+  display: flex;
+  width: 20em;
+  align-items: center;
+  /* background-color: aqua; */
+  justify-content: space-between;
+}
+.filled-unit > div > h1 {
+  font-size: 1.3em;
+  width: 10em;
+  font-weight: 400;
+}
+
+.filled-img {
+  height: 5em;
+}
+
+.filled-right {
+  width: 20em;
+  height: fit-content;
+  background-color: #f7f7f7;
+  padding: 2em;
+}
+
+.filled-right > h1 {
+  font-weight: 500;
+}
+.filled-right > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em 0em;
+}
+.filled-right > div > h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.filled-right > button {
+  padding: 1em;
+  background-color: #0058cc;
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin: 0em auto;
+}
+.subtotal {
+  background: rgba(0, 88, 204, 0.1);
+  padding: 1em;
+}
+
+.subtotal > h2 {
+  font-weight: 600;
+  /* background-color: #cc4400; */
 }
