@@ -1,9 +1,9 @@
+import { wrap } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 
 function AddCart() {
 
-    const [totalAmt, settotalAmt] = useState(0)
-
+    let amount = 0
     // ISKO REPLACE KARNA HAI DYNAMIC DATA SE
     let arrayData=[
         {
@@ -13,7 +13,7 @@ function AddCart() {
         },
         {
             product : "mehdi brain moves are very good",
-            price : 500000,
+            price : 500,
             quantity : 1
         },{
             product : "Origin Rascal Scooter",
@@ -56,7 +56,7 @@ function AddCart() {
     
 
     let arrayRender = arrayData.map((each)=>{
-        // settotalAmt((prev)=>{prev+=(each.quantity * each.price)})
+        amount += each.quantity * each.price
         return(
             <div className= 'cart-list-item'>
                 <p className='product-item'>{each.product}</p>
@@ -71,7 +71,7 @@ function AddCart() {
     <div className="master-master">
         <div className='addcart-heading-master'>
             <p className='addcart-heading'>
-                We thank you for choosing<br/><p>Bookstore</p> 
+            We thank you for choosing<br/><p>Bookstore ;)</p> 
             </p>
             {/* some svg with absolute positioning*/}
         </div>
@@ -109,21 +109,25 @@ function AddCart() {
                     <h3 className='input-label'>Cart</h3>
                     <div className='cart-list-master'>
                         <div className='cart-list'>
-                            <div className='cart-list-header cart-list-item'>
+                            <div className='cart-list-header cart-list-item' style={{position: 'sticky'}}>
                                 <p className='product-header product-item'>Product</p>
                                 <p className='price-header price-item'>Price</p>
                                 <p className='quantity-header quantity-item'>Quantity</p>
-                            </div>
+                            </div>                    
+                        </div>
+                        <div className='cart-list-header cart-list-item' style={{flexDirection: 'column', color: 'black', maxHeight: '11rem',overflow: 'scroll'}}>
                             {arrayRender}
                         </div>
-                        {totalAmt}
+                        <div className='cart-list-header cart-list-item' style={{marginLeft: '60%'}}>
+                        <p className='quantity-header quantity-item' style={{marginLeft: '-6.5%'}}>Total</p> <p style={{color: 'black', marginLeft: '10%'}}> Rs.{amount}</p>
+                        </div>
                     </div>
                     
                 </div>
             </div>
         </div>
         <div>
-            <button className='addcart-button'>proceed</button>
+            <button className='addcart-button'>Place Order</button>
         </div>
     </div>
   )
